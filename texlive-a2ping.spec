@@ -3,16 +3,16 @@ Version:	20091109
 Release:	1
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive//graphics/a2ping/a2ping.pl
+URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(post):	texlive-tlpkg
+Provides:	texlive-a2ping.bin = %{EVRD}
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
-Provides:	texlive-a2ping.bin = %{EVRD}
 
 %description
 a2ping is a Perl script command line utility written for Unix
@@ -33,11 +33,13 @@ is often more compatible and better embeddable than its input.
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mltexlsr_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
