@@ -1,12 +1,12 @@
-# revision 18835
+# revision 26313
 # category TLCore
 # catalog-ctan /graphics/a2ping/a2ping.pl
-# catalog-date 2009-11-09 13:03:38 +0100
+# catalog-date 2012-04-13 20:01:51 +0200
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-a2ping
-Version:	20091109
-Release:	2
+Version:	20120413
+Release:	1
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
