@@ -1,4 +1,4 @@
-# revision 26313
+# revision 27321
 # category TLCore
 # catalog-ctan /graphics/a2ping/a2ping.pl
 # catalog-date 2012-04-13 20:01:51 +0200
@@ -42,7 +42,7 @@ is often more compatible and better embeddable than its input.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/a2ping
-%{_texmfdir}/scripts/a2ping/a2ping.pl
+%{_texmfdistdir}/scripts/a2ping/a2ping.pl
 %doc %{_mandir}/man1/a2ping.1*
 %doc %{_texmfdir}/doc/man/man1/a2ping.man1.pdf
 
@@ -55,9 +55,9 @@ is often more compatible and better embeddable than its input.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdir}/scripts/a2ping/a2ping.pl a2ping
+    ln -sf %{_texmfdistdir}/scripts/a2ping/a2ping.pl a2ping
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
