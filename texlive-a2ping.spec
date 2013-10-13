@@ -1,4 +1,4 @@
-# revision 27321
+# revision 29725
 # category TLCore
 # catalog-ctan /graphics/a2ping/a2ping.pl
 # catalog-date 2012-04-13 20:01:51 +0200
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-a2ping
 Version:	20120413
-Release:	1
+Release:	2
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
@@ -44,7 +44,7 @@ is often more compatible and better embeddable than its input.
 %{_bindir}/a2ping
 %{_texmfdistdir}/scripts/a2ping/a2ping.pl
 %doc %{_mandir}/man1/a2ping.1*
-%doc %{_texmfdir}/doc/man/man1/a2ping.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/a2ping.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,27 +58,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/a2ping/a2ping.pl a2ping
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Thu Oct 25 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120413-1
-+ Revision: 819770
-- Update to latest release.
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091109-2
-+ Revision: 749036
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091109-1
-+ Revision: 717778
-- texlive-a2ping
-- texlive-a2ping
-- texlive-a2ping
-- texlive-a2ping
-- texlive-a2ping
-- texlive-a2ping
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
