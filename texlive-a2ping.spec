@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-a2ping
 Version:	20120413
-Release:	3
+Release:	4
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
