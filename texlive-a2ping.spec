@@ -5,7 +5,7 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-a2ping
-Version:	20170414
+Version:	2.83p
 Release:	1
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
