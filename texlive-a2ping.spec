@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-a2ping
 Version:	2.83p
-Release:	2
+Release:	1
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
@@ -45,6 +45,7 @@ is often more compatible and better embeddable than its input.
 %{_texmfdistdir}/scripts/a2ping/a2ping.pl
 %doc %{_mandir}/man1/a2ping.1*
 %doc %{_texmfdistdir}/doc/man/man1/a2ping.man1.pdf
+%doc %{_texmfdistdir}/doc/support/a2ping/HISTORY.txt
 
 #-----------------------------------------------------------------------
 %prep
