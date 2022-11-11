@@ -1,18 +1,12 @@
-# revision 29725
-# category TLCore
-# catalog-ctan /graphics/a2ping/a2ping.pl
-# catalog-date 2012-04-13 20:01:51 +0200
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-a2ping
-Version:	2.83p
+Version:	52964
 Release:	1
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,12 +26,12 @@ many glitches during the EPS to EPS conversion, so its output
 is often more compatible and better embeddable than its input.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,14 +43,14 @@ is often more compatible and better embeddable than its input.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/a2ping/a2ping.pl a2ping
+	ln -sf %{_texmfdistdir}/scripts/a2ping/a2ping.pl a2ping
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
