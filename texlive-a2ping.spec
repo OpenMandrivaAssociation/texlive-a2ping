@@ -1,6 +1,6 @@
 Name:		texlive-a2ping
 Version:	52964
-Release:	1
+Release:	2
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
