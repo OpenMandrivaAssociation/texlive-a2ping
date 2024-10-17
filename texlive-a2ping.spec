@@ -3,7 +3,7 @@ Version:	52964
 Release:	2
 Summary:	Advanced PS, PDF, EPS converter
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
+URL:		https://www.ctan.org/tex-archive/graphics/a2ping/a2ping.pl
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a2ping.doc.r%{version}.tar.xz
