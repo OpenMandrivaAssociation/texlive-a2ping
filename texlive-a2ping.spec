@@ -1,5 +1,6 @@
 %global tl_name a2ping
 %global tl_revision 52964
+%global tl_bin_links a2ping:%{_texmfdistdir}/scripts/a2ping/a2ping.pl
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(a2ping.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 a2ping is a Perl script command line utility written for Unix that
